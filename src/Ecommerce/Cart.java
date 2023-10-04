@@ -16,7 +16,7 @@ public class Cart {
         }
 
         public void addToCart(Item ogg , int quantity){
-            String toAdd = "prodotto : " + ogg.code + " quantità : " + quantity + " prezzo : " + (ogg.price * quantity);
+            String toAdd = "prodotto : " + ogg.name + " quantità : " + quantity + " prezzo : " + (ogg.price * quantity);
             for(int i = 9 ; i >= 0 ; i--){
                 if(i == 0){
                     this.list[i] = toAdd;
@@ -25,15 +25,18 @@ public class Cart {
                 }
 
             }
-            this.total += (ogg.price);
-            System.out.println("il totale è : " + this.total);
+            this.total += (ogg.price * quantity);
+
             ogg.minusOne(quantity);
 
 
         }
 
         public void info(){
-            System.out.println(Arrays.toString(this.list));
+            for (int i = 0 ; i < this.list.length ; i++){
+            System.out.println("numero : " + i + " " +this.list[i]);
+            }
+            System.out.println("il totale è : " + this.total);
         }
 
 

@@ -5,6 +5,9 @@ public class Esercizio2Cellulare {
 
         CellSim franco = new CellSim(0.00 );
 
+
+        franco.addCredit(60);
+
         franco.info();
         franco.call(412412515 , 40);
         franco.call(782164515 , 23);

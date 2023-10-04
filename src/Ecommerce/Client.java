@@ -17,7 +17,10 @@ public class Client {
     }
 
 
+    public  void putInCart(Cart MyCart ,Item ogg ,  int quantity){
+        MyCart.addToCart(ogg , quantity);
 
+    }
 
 
 
